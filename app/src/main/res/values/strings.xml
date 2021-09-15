@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="btn_delete">DEL</string>
-    <string name="btn_CE">CE</string>
+    <string name="btn_AC">AC</string>
     <string name="btn_bracket_left">(</string>
     <string name="btn_bracket_right">)</string>
     <string name="btn_divide">÷</string>

@@ -101,13 +101,13 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_CE"
+            android:id="@+id/btn_AC"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#FFFFFF"
-            android:text="@string/btn_CE"
+            android:text="@string/btn_AC"
             android:textColor="#FF5722"
             android:textSize="40sp" />
 
