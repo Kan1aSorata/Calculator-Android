@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             addExp("=")
             mBinding!!.expression.text = exp
             mBinding!!.result.text = res.toString()
-            exp = ""
+            exp = res.toString()
         }
 
         val btnDigs = arrayOf(mBinding!!.btn0, mBinding!!.btn1, mBinding!!.btn2, mBinding!!.btn3, mBinding!!.btn4, mBinding!!.btn5, mBinding!!.btn6, mBinding!!.btn7, mBinding!!.btn8, mBinding!!.btn9)
@@ -73,8 +73,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addExp(element: String) {
-        exp = exp.plus(element)
-        mBinding!!.result.text = exp
+        if (exp.length < 9) {
+            exp = exp.plus(element)
+            mBinding!!.result.text = exp
+        }
     }
 
     @SuppressLint("SetTextI18n")
