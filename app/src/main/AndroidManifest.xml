@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator">
         <activity
+            android:name=".HorizontalActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MathCalculator"
+            android:exported="true"
+            android:label="@string/title_activity_math_calculator"
+            android:theme="@style/Theme.Calculator.NoActionBar" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

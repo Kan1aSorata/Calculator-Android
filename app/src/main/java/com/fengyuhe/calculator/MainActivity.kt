@@ -1,6 +1,7 @@
 package com.fengyuhe.calculator
 
 import android.annotation.SuppressLint
+import android.content.res.Configuration
 import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,18 +10,26 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
+import com.fengyuhe.calculator.databinding.ActivityHorizontalBinding
 import com.fengyuhe.calculator.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
     private var mBinding: ActivityMainBinding? = null
+    private var hBinding: ActivityHorizontalBinding? = null
     private var exp = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mBinding!!.root)
+        hBinding = ActivityHorizontalBinding.inflate(layoutInflater)
+        val orientation = resources.configuration.orientation
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(hBinding!!.root)
+        } else if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(mBinding!!.root)
+        }
 
         mBinding!!.btnPlus.setOnClickListener { addExp("+") }
         mBinding!!.btnMinus.setOnClickListener { addExp("-") }

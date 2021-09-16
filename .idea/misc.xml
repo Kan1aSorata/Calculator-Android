@@ -4,7 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/background.xml" value="0.597948717948718" />
+        <entry key="app/src/main/res/layout/activity_horizontal.xml" value="0.16897046561293166" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/activity_math_calculator.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/content_math_calculator.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.35572916666666665" />
+        <entry key="app/src/main/res/layout/fragment_second.xml" value="0.35572916666666665" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.597948717948718" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.597948717948718" />
       </map>
