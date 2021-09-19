@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/exchange_rate"
+        android:title="汇率计算"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/salary"
+        android:title="工资计算"
+        app:showAsAction="never" />
+</menu>

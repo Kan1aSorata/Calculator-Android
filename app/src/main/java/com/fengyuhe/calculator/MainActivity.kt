@@ -8,9 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuItem
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import com.fengyuhe.calculator.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
@@ -82,6 +84,9 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         }
+
+        setSupportActionBar(findViewById(R.id.main_actionBar))
+
     }
 
     private fun addExp(element: String) {
@@ -91,6 +96,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //计算机主要计算逻辑
+    //0915: 已经包含括号匹配 自动忽略多余括号
     @SuppressLint("SetTextI18n")
     private fun eval(expr: String): Float {
         var index = 0 // current index
@@ -142,6 +149,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Activity 跳转
+    //TODO: Intent数据读取失败，回调不执行 未解决
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         when (requestCode) {
@@ -153,6 +162,28 @@ class MainActivity : AppCompatActivity() {
                 expression.text = returnExp
                 resultView.text = returnResult
             }
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.actionbar_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.exchange_rate -> {
+            val intent = Intent(this, ExchangeActivity::class.java)
+            startActivity(intent)
+            true
+        }
+
+        R.id.salary -> {
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
         }
     }
 }

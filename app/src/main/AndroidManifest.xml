@@ -2,22 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fengyuhe.calculator">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Calculator">
+        android:theme="@style/Theme.Calculator.NoActionBar">
         <activity
             android:name=".HorizontalActivity"
             android:launchMode="standard"
             android:exported="true" />
         <activity
-            android:name=".MathCalculator"
-            android:exported="true"
-            android:label="@string/title_activity_math_calculator"
-            android:theme="@style/Theme.Calculator.NoActionBar" />
+            android:name=".ExchangeActivity"
+            android:launchMode="standard"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:launchMode="standard"

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ExchangeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/origin_country_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/origin_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="数量"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:textColor="@color/design_default_color_primary_dark"
+                android:ems="6"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/after_country_spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/textView_afterExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="换算后货币数量"
+                android:textSize="18sp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="换算"
+        />
+
+</LinearLayout>

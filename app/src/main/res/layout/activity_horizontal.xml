@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".HorizontalActivity">
 
     <TextView
         android:id="@+id/expression"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="3.3"
+        android:layout_weight="3.0"
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-light"
         android:gravity="end|bottom"
@@ -25,7 +25,7 @@
         android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2.9"
+        android:layout_weight="2.6"
         android:background="#FFFFFF"
         android:fontFamily="sans-serif-light"
         android:gravity="bottom|end"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_weight="0.9">
+        android:layout_weight="1.0">
 
         <LinearLayout
             android:layout_width="match_parent"
