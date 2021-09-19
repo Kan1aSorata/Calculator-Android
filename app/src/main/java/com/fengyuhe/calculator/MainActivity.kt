@@ -1,6 +1,7 @@
 package com.fengyuhe.calculator
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
@@ -10,25 +11,27 @@ import android.view.LayoutInflater
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
-import com.fengyuhe.calculator.databinding.ActivityHorizontalBinding
 import com.fengyuhe.calculator.databinding.ActivityMainBinding
 import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
     private var mBinding: ActivityMainBinding? = null
-    private var hBinding: ActivityHorizontalBinding? = null
     private var exp = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivityMainBinding.inflate(layoutInflater)
-        hBinding = ActivityHorizontalBinding.inflate(layoutInflater)
         val orientation = resources.configuration.orientation
+        setContentView(mBinding!!.root)
+
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setContentView(hBinding!!.root)
-        } else if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setContentView(mBinding!!.root)
+            val intent = Intent(this, HorizontalActivity::class.java)
+//            setContentView(hBinding!!.root)
+            intent.putExtra("exp", exp)
+            intent.putExtra("result", mBinding!!.result.text)
+            println("go landscape")
+            startActivityForResult(intent, RESULT_OK)
         }
 
         mBinding!!.btnPlus.setOnClickListener { addExp("+") }
@@ -135,6 +138,20 @@ class MainActivity : AppCompatActivity() {
             if (index < expr.length) {
                 mBinding!!.result.text = "Invalid expression at:${index}"
                 exp = ""
+            }
+        }
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        when (requestCode) {
+            1 -> if (resultCode == RESULT_OK) {
+                val returnExp = data?.getStringExtra("exp")
+                val returnResult = data?.getStringExtra("result")
+                val expression = findViewById<TextView>(R.id.expression)
+                val resultView = findViewById<TextView>(R.id.result)
+                expression.text = returnExp
+                resultView.text = returnResult
             }
         }
     }

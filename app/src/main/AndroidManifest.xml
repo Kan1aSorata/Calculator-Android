@@ -11,6 +11,7 @@
         android:theme="@style/Theme.Calculator">
         <activity
             android:name=".HorizontalActivity"
+            android:launchMode="standard"
             android:exported="true" />
         <activity
             android:name=".MathCalculator"
@@ -19,6 +20,7 @@
             android:theme="@style/Theme.Calculator.NoActionBar" />
         <activity
             android:name=".MainActivity"
+            android:launchMode="standard"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
