@@ -130,6 +130,22 @@ class HorizontalActivity : AppCompatActivity() {
             hBinding!!.result.text = csc.toString()
         }
 
+        hBinding!!.btnBin.setOnClickListener {
+
+        }
+
+        hBinding!!.btnOct.setOnClickListener {
+
+        }
+
+        hBinding!!.btnDec.setOnClickListener {
+
+        }
+
+        hBinding!!.btnHex.setOnClickListener {
+
+        }
+
     }
 
     private fun addExp(element: String) {

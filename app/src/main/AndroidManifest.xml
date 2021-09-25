@@ -20,6 +20,10 @@
             android:launchMode="standard"
             android:exported="true" />
         <activity
+            android:name=".NumerationActivity"
+            android:launchMode="standard"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:launchMode="standard"
             android:exported="true">

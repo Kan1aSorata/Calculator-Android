@@ -14,6 +14,7 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
 import com.fengyuhe.calculator.databinding.ActivityHorizontalBinding
+import com.fengyuhe.calculator.databinding.ActivityNumerationBinding
 import com.fengyuhe.calculator.databinding.ExchangedialogBinding
 import java.time.temporal.TemporalAmount
 import okhttp3.*

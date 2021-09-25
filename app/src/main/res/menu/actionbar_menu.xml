@@ -5,6 +5,14 @@
         android:title="汇率计算"
         app:showAsAction="never" />
 
+    <item android:id="@+id/numeration"
+        android:title="进制转换"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/convert"
+        android:title="单位换算"
+        app:showAsAction="never" />
+
     <item android:id="@+id/salary"
         android:title="工资计算"
         app:showAsAction="never" />

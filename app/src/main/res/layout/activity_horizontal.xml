@@ -133,6 +133,53 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btn_Bin"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="二进制"
+                    android:textColor="#FF5722"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_Oct"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="八进制"
+                    android:textColor="#FF5722"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_Dec"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="十进制"
+                    android:textColor="#FF5722"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_Hex"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="十六进制"
+                    android:textColor="#FF5722"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout

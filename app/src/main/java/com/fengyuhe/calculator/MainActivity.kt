@@ -182,6 +182,12 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        R.id.numeration -> {
+            val intent = Intent(this, NumerationActivity::class.java)
+            startActivity(intent)
+            true
+        }
+
         else -> {
             super.onOptionsItemSelected(item)
         }
